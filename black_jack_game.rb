@@ -24,9 +24,9 @@ def deal_card(decks_of_poker, someone)
 		random_suit = poker.keys.sample
 		random_card = poker[random_suit].keys.sample
 
-		hash = {:suit=>randam_suit, :card=>random_card, :value=>poker[randam_suit][random_card]}		
+		hash = {:suit=>random_suit, :card=>random_card, :value=>poker[random_suit][random_card]}		
 		someone[:cards].push(hash)
-		poker[randam_suit].delete(random_card)
+		poker[random_suit].delete(random_card)
 		
 end
 
