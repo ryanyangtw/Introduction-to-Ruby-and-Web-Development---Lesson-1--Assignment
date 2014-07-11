@@ -50,7 +50,7 @@ def check_ace_exist?(someone)
 			return true
 		end
 	end
-	
+
 	return false
 end
 
@@ -158,14 +158,15 @@ end
 
 
 decks_of_poker = initialize_poker()
+player = {}
+computer = {:name=>"Computer"}
+puts "Welcome to the blackjack game. What's your name?"
+player[:name] = gets.chomp 
 
 begin
 	system("clear")
-	player = {:cards=>[]}
-	computer = {:name=>"Computer", :cards=>[]}
-	puts "Welcome to the blackjack game. What's your name?"
-	player[:name] = gets.chomp 
-
+	player[:cards] = []
+	computer[:cards] = []
 	initialize_deal_card(decks_of_poker,player,computer)
 	winner = player_turn(decks_of_poker,player,computer)
 	
