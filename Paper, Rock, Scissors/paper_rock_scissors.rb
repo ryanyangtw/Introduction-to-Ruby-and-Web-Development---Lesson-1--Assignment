@@ -5,7 +5,7 @@ require 'pry'
 
 def  who_won?(p_select, c_select)
 	
-	h = {"P"=>"Paper", "R"=>"Rock", "S"=>"Sissors"}
+	h = {"P"=>"Paper", "R"=>"Rock", "S"=>"Scissors"}
 	puts "you picked #{h[p_select]} and computer picked #{h[c_select]}. "
 	
 	case p_select 
