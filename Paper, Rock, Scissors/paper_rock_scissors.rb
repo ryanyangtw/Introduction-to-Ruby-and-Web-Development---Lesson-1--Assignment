@@ -65,9 +65,14 @@ end
 def run
 
 	puts 'Play Ppaer Rock Scissors!'
-	puts 'Choole one: (P/R/S)'
-	response = gets.chomp
-	response.upcase!
+	
+	begin
+		puts 'Choose one: (P/R/S)'
+		response = gets.chomp
+		response.upcase!
+	end while !['P','R','S'].include?(response)
+
+
 	who_won?(response, ['P', 'R', 'S'].sample)
 
 end
